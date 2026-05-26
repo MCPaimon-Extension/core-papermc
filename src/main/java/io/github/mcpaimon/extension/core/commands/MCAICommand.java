@@ -144,6 +144,20 @@ public class MCAICommand implements TabExecutor {
                 return preEvent.getToolResults();
             }).thenAccept(response -> {
                 sender.sendMessage(Component.text("[MCAI] " + response.content(), NamedTextColor.AQUA));
+                
+                // Save log to the database
+                String chatHistory = "User: " + promptText + "\nAI: " + response.content() + "\n\n";
+                this.plugin.getManager().insertLog(
+                    type,
+                    uuid,
+                    session.platformId(),
+                    session.modelId(),
+                    chatHistory,
+                    response.totalTokens()
+                ).exceptionally(throwable -> {
+                    this.plugin.getLogger().warning("Failed to save AI chat log for /ai ask (" + uuid + "): " + throwable.getMessage());
+                    return null;
+                });
             });
         }).exceptionally(e -> {
             sender.sendMessage(Component.text("[MCAI] Error: " + e.getMessage(), NamedTextColor.RED));
