@@ -5,4 +5,4 @@ version: ${version}
 git:
   provider: github
   owner: MCPaimon-Extension
-  repository: core
+  repository: core-papermc
