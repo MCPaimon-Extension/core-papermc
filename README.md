@@ -41,7 +41,7 @@ This extension registers the following tools to the MCAI system:
 ## Requirements
 
 - **Java**: 25+
-- **PaperMC**: 1.21.x (Paper API 26.1.2)
+- **PaperMC**: 26.1.2+
 - **MCAI Plugin**: Latest version
 
 ## Build Instructions
