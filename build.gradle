@@ -22,9 +22,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'io.github.mcpaimon:api:2026.0.6-1'
-    compileOnly 'io.github.mcpaimon:common:2026.0.6-1'
-    compileOnly 'io.github.mcpaimon:papermc:2026.0.6-1'
+    compileOnly 'io.github.mcpaimon:papermc:2026.0.6-2'
 
     compileOnly 'io.papermc.paper:paper-api:26.1.2.build.+'
 }
@@ -36,7 +34,7 @@ java {
 }
 
 base {
-    archivesName = project.property('project-name')
+    archivesName = 'CorePaperMC'
 }
 
 processResources {

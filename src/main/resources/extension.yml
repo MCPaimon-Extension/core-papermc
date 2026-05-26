@@ -1,8 +1,8 @@
 name: ${name}
-main: ${main}.extension.template.Template
+main: ${main}.extension.core.Core
 version: ${version}
 
 git:
   provider: github
   owner: MCPaimon-Extension
-  repository: template
+  repository: core
