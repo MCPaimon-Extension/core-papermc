@@ -32,7 +32,7 @@ This extension registers the following tools to the MCAI system:
 ## Installation
 
 1. Ensure the [MCAI Plugin](https://github.com/MCPaimon/plugin) is installed on your PaperMC server.
-2. Place the compiled `Core-extension-*.jar` into the following directory:
+2. Place the compiled `CorePaperMC-*.jar` into the following directory:
    ```
    plugins\MCAI\extensions\libs
    ```
